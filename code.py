@@ -20,8 +20,8 @@ from adafruit_hid.keycode import Keycode
 # to 0.5 then added to the base to get the final value.
 # Delay formula: seconds = base + ((random.random() - 0.5) * noise)
 # CAUTION: Don't set this faster than human speed (might get yourself banned)
-DELAY_BASE_S = 10.0
-DELAY_NOISE_S = DELAY_BASE_S * 0.5
+DELAY_BASE_S = 41
+DELAY_NOISE_S = 23
 
 # These two values determine the keydown time (same method as for delay)
 KEYDOWN_BASE_S = 0.180
@@ -32,7 +32,7 @@ KEYCODE = Keycode.SPACEBAR
 
 # Maximum hours autoclicker will run before it automatically shuts itself off.
 # Pets get hungry and stop aging if you AFK for too long between feedings.
-MAX_AUTO_HOURS = 2/60   # TODO: change this from test value to real value
+MAX_AUTO_HOURS = 9
 
 # Button press debounce interval
 DEBOUNCE_S = 0.05
@@ -96,7 +96,6 @@ def send_HID_event(max_auto_s):
     assert seconds > 0.1, "randomized keydown delay was too short"
     if time.monotonic() + seconds > max_auto_s:
         return
-    print("  TODO: type ' '")
     keeb.press(KEYCODE)
     sleep_with_interrupt(btn, seconds, max_auto_s)
     keeb.release(KEYCODE)

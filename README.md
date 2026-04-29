@@ -1,7 +1,5 @@
 # USB HID Autoclicker
 
-**[DRAFT: WORK IN PROGRESS]**
-
 This is a USB HID hardware autoclicker to prevent AFK kicks in Grow a Garden on
 Roblox. The code tells the AtomS3 Lite to present itself as an HID keyboard.
 The keyboard types spaces on a timer to make your avatar jump. Jumping resets
@@ -11,8 +9,8 @@ but using CircuitPython is safer (some free autoclickers have malware).
 The point of staying logged in is to help with farming fruit mutations, which
 happen slower when you're offline. Roblox will kick you after 20 minutes
 of inactivity. Computers often have a screen saver or sleep mode that activates
-at 5 or 10 minutes of idle. So, the code here makes your avatar jump at random
-intervals in the range of 1 to 5 minutes.
+at 5 or 10 minutes of idle. The code here will type the spacebar at randomized
+intervals about once or twice a minute.
 
 CAUTION: Using a misconfigured autoclicker has the potential to get you banned
 from a game or banned from Roblox. Before you use this, familiarize yourself
@@ -57,3 +55,10 @@ autoclicker project bundle code.py:
 5. The autoclicker will shut itself off automatically after 9 hours. To turn it
    off earlier, press the big button on the AtomS3 Lite. The LED should turn
    off when the clicker has stopped.
+
+CAUTION: For this to work, you need to  leave your operating system's window
+manager focused on the Roblox window. Otherw ise, you'll end up with random
+spaces typed into whate ver other window you switched the focus to. If you try
+to work on the Roblox  computer while this is running, you'll get ran dom
+spaces inserted into whatever  app you have open. I recommend using a spare
+computer for ru nning the AFK autoclicker.
