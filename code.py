@@ -9,7 +9,6 @@ import time
 import usb_hid
 
 from adafruit_hid.keyboard import Keyboard
-from adafruit_hid.keyboard_layout_us import KeyboardLayoutUS
 from adafruit_hid.keycode import Keycode
 
 
@@ -27,6 +26,9 @@ DELAY_NOISE_S = DELAY_BASE_S * 0.5
 # These two values determine the keydown time (same method as for delay)
 KEYDOWN_BASE_S = 0.180
 KEYDOWN_NOISE_S = 0.090
+
+# The HID keycode to send
+KEYCODE = Keycode.SPACEBAR
 
 # Maximum hours autoclicker will run before it automatically shuts itself off.
 # Pets get hungry and stop aging if you AFK for too long between feedings.
@@ -51,6 +53,8 @@ AMBER = bytearray([7,7,0])
 btn = DigitalInOut(BTN)
 led.switch_to_input(Pull.UP)
 
+# Virtual HID keyboard device
+keeb = Keyboard(usb_hid.devices)
 
 # This returns a value in the range of base_s ± plus_minus_s seconds
 def randomize(base_s, noise_s):
@@ -93,9 +97,9 @@ def send_HID_event(max_auto_s):
     if time.monotonic() + seconds > max_auto_s:
         return
     print("  TODO: type ' '")
-    # TODO: HID key down
+    keeb.press(KEYCODE)
     sleep_with_interrupt(btn, seconds, max_auto_s)
-    # TODO: HID key up
+    keeb.release(KEYCODE)
     neopixel_write(led, GREEN)
 
 def main():

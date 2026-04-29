@@ -18,3 +18,4 @@ CircuitPython API Docs:
 - https://docs.circuitpython.org/projects/hid/en/latest/api.html
 - https://docs.circuitpython.org/en/latest/shared-bindings/time/
 - https://docs.circuitpython.org/en/latest/shared-bindings/random/
+- https://docs.circuitpython.org/projects/hid/en/latest/api.html
