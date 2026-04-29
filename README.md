@@ -50,9 +50,10 @@ autoclicker project bundle code.py:
 
 3. Find a good spot for your avatar to stand.
 
-4. Press the big button on the AtomS3 Lite. The LED should turn dim red with a
-   bump in brightness each time the autoclicker types a space.
+4. Press the big button on the AtomS3 Lite. The LED should turn amber while
+   it's pressing the spacebar and green while it's waiting to press the next
+   one.
 
 5. The autoclicker will shut itself off automatically after 9 hours. To turn it
    off earlier, press the big button on the AtomS3 Lite. The LED should turn
-   off.
+   off when the clicker has stopped.

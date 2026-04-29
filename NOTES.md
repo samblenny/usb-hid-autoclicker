@@ -10,3 +10,11 @@ M5Stack AtomS3 Lite Links:
   - GPIO41: big button on top of enclosure
   - GPIO4: IR LED (active high)
   - GPIO35: RGB LED DIN (power is always on)
+
+
+CircuitPython API Docs:
+- https://docs.circuitpython.org/en/latest/shared-bindings/digitalio/
+- https://docs.circuitpython.org/en/latest/shared-bindings/neopixel_write/
+- https://docs.circuitpython.org/projects/hid/en/latest/api.html
+- https://docs.circuitpython.org/en/latest/shared-bindings/time/
+- https://docs.circuitpython.org/en/latest/shared-bindings/random/
