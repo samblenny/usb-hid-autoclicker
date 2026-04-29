@@ -46,7 +46,10 @@ autoclicker project bundle code.py:
    your fruits stolen while AFK), then feed your pets or whatever else you need
    to do to get ready.
 
-3. Find a good spot for your avatar to stand.
+3. Find a good spot for your avatar to stand. For lower CPU use and less fan
+   noise, you might try going to the opposite corner of the map away from your
+   garden and looking off over the edge toward empty sky. You can also turn off
+   VFX and audio options in the settings menu.
 
 4. Press the big button on the AtomS3 Lite. The LED should turn amber while
    it's pressing the spacebar and green while it's waiting to press the next
